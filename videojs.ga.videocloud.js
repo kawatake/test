@@ -207,7 +207,7 @@
         sendbeaconOverride(eventCategory, action, eventLabel, value, nonInteraction);
       } else if (window.ga) {
         ga(trackerName + 'send', 'event', {
-          'eventCategory': eventCategory,
+          'eventCategory': eventCategory + $pram,
           'eventAction': action,
           'eventLabel': eventLabel,
           'eventValue': value,
@@ -259,7 +259,7 @@
           return sendbeaconOverride(eventCategory, getEventName('player_load'), href, iframe, true);
         } else if (window.ga) {
           return ga(trackerName + 'send', 'event', {
-            'eventCategory': eventCategory,
+            'eventCategory': eventCategory + $pram,
             'eventAction': getEventName('player_load'),
             'eventLabel': href,
             'eventValue': iframe,
