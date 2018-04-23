@@ -30,7 +30,7 @@
     defaultsEventsToTrack = ['player_load', 'video_load', 'percent_played', 'start', 'end', 'seek', 'play', 'pause', 'resize', 'volume_change', 'error', 'fullscreen'];
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
-    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player';
+    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player ' + $param + ' |';
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
@@ -207,7 +207,7 @@
         sendbeaconOverride(eventCategory, action, eventLabel, value, nonInteraction);
       } else if (window.ga) {
         ga(trackerName + 'send', 'event', {
-          'eventCategory': eventCategory + $pram,
+          'eventCategory': eventCategory,
           'eventAction': action,
           'eventLabel': eventLabel,
           'eventValue': value,
@@ -259,7 +259,7 @@
           return sendbeaconOverride(eventCategory, getEventName('player_load'), href, iframe, true);
         } else if (window.ga) {
           return ga(trackerName + 'send', 'event', {
-            'eventCategory': eventCategory + $pram,
+            'eventCategory': eventCategory,
             'eventAction': getEventName('player_load'),
             'eventLabel': href,
             'eventValue': iframe,
