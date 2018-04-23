@@ -31,6 +31,7 @@
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
     eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player ' + $param + ' |';
+    console.log(eventCategory);
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
