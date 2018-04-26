@@ -215,7 +215,7 @@
           'nonInteraction': nonInteraction
         });
       } else if (window._gaq) {
-        _gaq.push(['_trackEvent', eventCategory, action, eventLabel, value, nonInteraction]);
+        _gaq.push(['_trackEvent', eventCategory, action, eventLabel + "[" + $param + "]", value, nonInteraction]);
       } else if (options.debug) {
         videojs.log("Google Analytics not detected");
       }
