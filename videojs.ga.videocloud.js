@@ -30,8 +30,7 @@
     defaultsEventsToTrack = ['player_load', 'video_load', 'percent_played', 'start', 'end', 'seek', 'play', 'pause', 'resize', 'volume_change', 'error', 'fullscreen'];
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
-    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player ' + $param + ' |';
-    console.log('[' + $param + "]" + eventCategory);
+    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player;
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
@@ -215,8 +214,7 @@
           'nonInteraction': nonInteraction
         });
       } else if (window._gaq) {
-        _gaq.push(['_trackEvent', eventCategory, action, eventLabel + "[" + $param + "]", value, nonInteraction]);
-        console.log('1[' + $param + "]" + eventLabel);
+        _gaq.push(['_trackEvent', eventCategory, action, eventLabel, value, nonInteraction]);
       } else if (options.debug) {
         videojs.log("Google Analytics not detected");
       }
@@ -268,7 +266,6 @@
             'nonInteraction': true
           });
         } else if (window._gaq) {
-          console.log('2[' + $param + "]" + eventCategory);
           return _gaq.push(['_trackEvent', eventCategory, getEventName('player_load'), href, iframe, false]);
         } else {
           return videojs.log("Google Analytics not detected");
