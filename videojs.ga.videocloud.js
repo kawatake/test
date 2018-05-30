@@ -30,7 +30,11 @@
     defaultsEventsToTrack = ['player_load', 'video_load', 'percent_played', 'start', 'end', 'seek', 'play', 'pause', 'resize', 'volume_change', 'error', 'fullscreen'];
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
-    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player TEST';
+
+$param = window.parent.document.getElementById("param").innerHTML;
+console.log($param);
+
+    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player' + $param;
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
