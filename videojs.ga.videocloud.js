@@ -34,7 +34,7 @@
 $param = window.parent.document.getElementById("param").innerHTML;
 console.log($param);
 
-    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player' + $param;
+    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player Speciality';
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
