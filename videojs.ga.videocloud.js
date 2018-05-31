@@ -83,7 +83,7 @@ try {
       }
       return name;
     };
-    if (window.location.host === 'players.brightcove.net' || window.location.host === 'preview-players.brightcove.net' || window.location.host === 'ope-gallery.loftwork.site' || trackerName !== '') {
+    if (trackerName !== '') {
       tracker = options.tracker || dataSetupOptions.tracker;
       if (tracker) {
         (function(i, s, o, g, r, a, m) {
