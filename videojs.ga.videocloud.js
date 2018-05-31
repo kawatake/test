@@ -31,8 +31,8 @@
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
 
-$param = window.parent.document.getElementById("param").innerHTML;
-console.log($param);
+//$param = window.parent.document.getElementById("param").innerHTML;
+//console.log($param);
 
     eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player Speciality_' + $param;
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
