@@ -33,7 +33,7 @@
 
     var param = "";
     try {
-        param = "_" + window.parent.document.getElementById("speciality").innerHTML;
+        param = "_" + window.parent.document.getElementById("speciality").value;
     } catch(error) {
     }
 
