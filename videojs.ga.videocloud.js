@@ -224,6 +224,7 @@
       } else if (window._gaq) {
         _gaq.push(['_trackEvent', eventCategory, action, eventLabel, value, nonInteraction]);
       } else if (options.debug) {
+        console.log("test1");
         videojs.log("Google Analytics not detected");
       }
     };
@@ -276,6 +277,7 @@
         } else if (window._gaq) {
           return _gaq.push(['_trackEvent', eventCategory, getEventName('player_load'), href, iframe, false]);
         } else {
+          console.log("test2");
           return videojs.log("Google Analytics not detected");
         }
       }
