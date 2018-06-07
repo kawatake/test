@@ -31,7 +31,7 @@
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
 
-    var param = "_none";
+    var param = "_None";
     //try {
     //    param = "_" + window.parent.document.getElementById("speciality").value;
     //} catch(error) {
