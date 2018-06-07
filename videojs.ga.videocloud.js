@@ -32,11 +32,10 @@
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
 
     var param = "_None";
-    //try {
-    //    param = "_" + window.parent.document.getElementById("speciality").value;
-    //} catch(error) {
-    //}
-    console.log(param);
+    try {
+      param = "_" + window.parent.document.getElementById("speciality").value;
+    } catch(error) {
+    }
 
     eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player Speciality' + param;
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
