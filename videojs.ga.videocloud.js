@@ -82,7 +82,7 @@
       }
       return name;
     };
-    if (trackerName !== '') {
+    if (window.location.host === 'players.brightcove.net' || window.location.host === 'preview-players.brightcove.net' || window.location.host === 'ope-gallery.loftwork.site' || window.location.host === 'www.olympusprofed.com' || trackerName !== '') {
       tracker = options.tracker || dataSetupOptions.tracker;
       if (tracker) {
         (function(i, s, o, g, r, a, m) {
