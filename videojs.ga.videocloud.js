@@ -31,13 +31,13 @@
     eventsToTrack = options.eventsToTrack || dataSetupOptions.eventsToTrack || defaultsEventsToTrack;
     percentsPlayedInterval = options.percentsPlayedInterval || dataSetupOptions.percentsPlayedInterval || 10;
 
-    var param = "_None";
+    var param = "None";
     try {
-      param = "_" + window.parent.document.getElementById("speciality").value;
+      param = window.parent.document.getElementById("speciality").value;
     } catch(error) {
     }
 
-    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player Speciality' + param;
+    eventCategory = options.eventCategory || dataSetupOptions.eventCategory || 'Brightcove Player Speciality ' + param;
     defaultLabel = options.eventLabel || dataSetupOptions.eventLabel;
     sendbeaconOverride = options.sendbeaconOverride || false;
     options.debug = options.debug || false;
@@ -81,7 +81,7 @@
       }
       return name;
     };
-    if (window.location.host === 'players.brightcove.net' || window.location.host === 'preview-players.brightcove.net' || window.location.host === 'ope-gallery.loftwork.site' || window.location.host === 'www.olympusprofed.com' || trackerName !== '') {
+    if (window.location.host === 'players.brightcove.net' || window.location.host === 'preview-players.brightcove.net' || window.location.host === 'www.olympusprofed.com' || trackerName !== '') {
       tracker = options.tracker || dataSetupOptions.tracker;
       if (tracker) {
         (function(i, s, o, g, r, a, m) {
